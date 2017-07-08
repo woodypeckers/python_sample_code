@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://mail.163.com/" />
+<title>邮箱登录</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">邮箱登录</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>163网易免费邮--中文邮箱第一品牌</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://163.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//header/a</td>
+	<td>中文邮箱第一品牌</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lbNormal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=idInput</td>
+	<td>zelin_test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=password</td>
+	<td>zelin123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=loginBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>网易邮箱6.0版</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//body/section/h1</td>
+	<td>您已成功退出网易邮箱。</td>
+</tr>
+</tbody></table>
+</body>
+</html>
