@@ -11,14 +11,15 @@ import sys, time, traceback
 import threading
 
 
-IP = '192.168.5.140'
+IP = '192.168.2.17'
 #IP = '192.168.1.16'
 host_dict = {
-             'tt': ["http://192.168.5.148:1234/wd/hub", "chrome"],
-             'ljl': ["http://192.168.5.152:5555/wd/hub", 'internet explorer'],
-             'lx': ["http://192.168.5.154:2347/wd/hub", 'chrome'],
-             'zjw': ["http://192.168.5.180:7777/wd/hub", 'firefox'],
-             'ld': ["http://192.168.5.150:1111/wd/hub", 'firefox']
+             'zhanglei': ["http://192.168.2.7:6666/wd/hub", "chrome"],
+             'zhanyong': ["http://192.168.2.11:9999/wd/hub", 'internet explorer'],
+             'wenbo': ["http://192.168.2.37:5555/wd/hub", 'chrome'],
+             'jiale': ["http://192.168.2.16:5555/wd/hub", 'chrome'],
+             'jaydan': ["http://192.168.2.13:1111/wd/hub", 'chrome'],
+             'huangquan':["http://192.168.2.28:7777/wd/hub", 'chrome']
              }
 
 desired_capabilities = {'platform': 'ANY',
@@ -40,7 +41,7 @@ def run_test1(host, desired_capabilities):
     time.sleep(2)
     driver.find_element_by_id("SubmitLoginBTN").click()
     time.sleep(2)
-    driver.quit()
+    #driver.quit()
 
 def run_test2(host, desired_capabilities):
     driver = Remote(command_executor=host, desired_capabilities=desired_capabilities)
@@ -49,7 +50,7 @@ def run_test2(host, desired_capabilities):
     driver.find_element_by_id("kw").send_keys("remote")
     driver.find_element_by_id("su").click()
     time.sleep(2)
-    driver.quit()
+    #driver.quit()
 
 def run_all(host, desired_capabilities):
     run_test1(host, desired_capabilities)
@@ -63,7 +64,7 @@ def main():
             print host, browser
             dc = desired_capabilities.copy()
             dc['browserName'] = browser
-            if i in ['tt', 'ljl', 'zjw']:
+            if i in ['zhanglei', 'zhanyong', 'wenbo']:
                 threads.append(threading.Thread(target=run_test1,
                                                 name=dc['browserName'],
                                                 args=(host, dc)))

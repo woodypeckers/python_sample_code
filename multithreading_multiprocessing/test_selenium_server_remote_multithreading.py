@@ -11,7 +11,7 @@ import sys, time, traceback
 import threading
 
 
-IP = '192.168.5.140'
+IP = '192.168.2.17'
 #IP = '192.168.1.16'
 host_dict = {'rs_ff': ["http://%s:5555/wd/hub" % IP, "firefox"],
              'rs_ie': ["http://%s:6666/wd/hub" % IP, 'internet explorer'],
