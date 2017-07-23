@@ -7,6 +7,7 @@ Resource          resources.robot
 
 *** Test Cases ***
 管理员用户_登录成功
+    [Template]    公共登录逻辑
     admin    123456    退出
 
 管理员用户_登录失败_错误的用户名
