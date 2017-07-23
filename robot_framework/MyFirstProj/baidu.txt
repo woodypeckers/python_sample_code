@@ -1,0 +1,23 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Test Cases ***
+gotobaidu
+    open browser    https://www.baidu.com    chrome
+    Input Password    kw    hello
+    ${a}=    get text    kw
+    log    ${a}
+    click button    su
+    page should contain    百度为您找到相关结果约
+    close browser
+
+goto_qq
+    open browser    https://www.baidu.com    firefox
+    click link    hao123
+    Wait Until Page Contains    登录    3
+    Go back
+    Comment    这是一个注释
+    close browser
+
+goto_sina
+    open browser    https://www.sina.com.cn    firefox

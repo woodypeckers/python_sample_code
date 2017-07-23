@@ -1,0 +1,2 @@
+*** Variables ***
+${location}       602
