@@ -1,0 +1,10 @@
+--outputdir
+c:\robot\woody\
+-C
+off
+-W
+100
+--suite
+Woody.Suite1
+--test
+Woody.Suite1.case1

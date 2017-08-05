@@ -4,7 +4,7 @@ Library           Selenium2Library
 *** Test Cases ***
 case1
     log    啄木鸟
-    Open Browser    http://localhost/bugfree    ie    ie
+    Open Browser    http://192.168.2.17/bugfree    ie    ie
     Capture Page Screenshot
     Open Browser    http://www.baidu.com    chrome    chrome
     Switch Browser    ie
