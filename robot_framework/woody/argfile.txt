@@ -1,5 +1,5 @@
 --outputdir
-c:\robot\woody\
+robot_framework\woody
 -C
 off
 -W
